@@ -1,0 +1,124 @@
+/*Configuracion de las fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*variables*/
+:root{
+    --color-primario: #000000;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #22DAFD;
+    --color-hover: #272727;
+
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
+}
+*{
+    padding: 0; /*Establece el relleno para los cuatro lados de un elemento*/
+    margin: 0;
+}
+/*body*/
+body{
+    background-color: var(--color-primario);/*color de fondo*/
+    color: var(--color-secundario);
+    box-sizing: border-box; /*Dice que el tamaño de caja se va a mantener estable*/
+}
+.header{
+    padding: 2% 0% 0% 25%;/* alinea el texto, arriba, derecha, abajo, izquierda*/
+}
+.header_menu{
+    display: flex; /*Coloca las cajas como si fueran celdas*/
+    gap: 80px;/* realiza un espaciado entre los contenedores.*/
+}
+.header_menu_link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600px; /* nos permite que un texto especifico sea más grueso o fino*/
+    color: var(--color-terciario);
+    text-decoration: none;/*quita el subrayado de abajo de los enlances*/
+}
+/*main*/
+.presentacion{
+    display: flex;
+    align-items: center; /*especifica la alineación predeterminada para los elementos dentro de un contenedor de cuadrícula o flexbox*/
+    padding: 6% 15%;
+    justify-content: space-between; /*controla la alineación de todos los elementos en el eje principal*/
+    gap: 82px;
+}
+.presentacion_contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column; /*determina la dirección en que se ordenarán los elementos en el espacio*/
+    gap: 24px;
+}
+.presentacion_contenido_titulo{
+    font-size: 2.25rem;
+    font-family: var(--fuente-krona);
+}
+.titulo-destaque{
+    color: var(--color-terciario);
+}
+.presentacion_contenido_texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+    text-align: justify;
+}
+/*configuracion del texto dentro de los botones*/
+.presentacion_enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+.presentacion_enlaces_subtitulo{
+    font-family: var(--fuente-krona);
+    font-size: 1.5rem;
+    font-weight: 400px;
+}
+/*configuracion de los botones*/
+.presentacion_enlaces_link{
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 8px;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+/*para darle color a los botones al pasar el mouese*/
+.presentacion_enlaces_link:hover{
+    background-color: var(--color-hover);
+}
+.presentacion_pantalla{
+    width: 50%;
+}
+/*fotter final de la pagina*/
+.footer{
+    background-color: var(--color-terciario);
+    padding: 24px;
+    color: var(--color-primario);
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+}
+/*Configuracion responsiva*/
+@media (max-width: 1200px){
+    .header{
+        padding: 10%;
+    }
+    .header_menu{
+        justify-content: center;
+    }
+    .presentacion{
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion_contenido{
+        width: auto; /*adapta todo el contenido*/
+    }
+}
