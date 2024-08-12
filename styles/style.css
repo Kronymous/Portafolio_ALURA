@@ -22,7 +22,7 @@ body{
     box-sizing: border-box; /*Dice que el tamaño de caja se va a mantener estable*/
 }
 .header{
-    padding: 2% 0% 0% 25%;/* alinea el texto, arriba, derecha, abajo, izquierda*/
+    padding: 2% 0% 0% 15%;/* alinea el texto, arriba, derecha, abajo, izquierda*/
 }
 .header_menu{
     display: flex; /*Coloca las cajas como si fueran celdas*/
@@ -53,6 +53,7 @@ body{
     font-size: 2.25rem;
     font-family: var(--fuente-krona);
 }
+
 .titulo-destaque{
     color: var(--color-terciario);
 }
@@ -99,9 +100,9 @@ body{
 }
 /*fotter final de la pagina*/
 .footer{
-    background-color: var(--color-terciario);
+    /*background-color: var(--color-terciario);*/
     padding: 24px;
-    color: var(--color-primario);
+    /*color: var(--color-primario);*/
     text-align: center;
     font-family: var(--fuente-montserrat);
     font-size: 1.5rem;
